@@ -336,9 +336,7 @@ main .inicio .filters button:hover{
 
 
 /*BOTÃO DISCORD*/
-.botao_discord{
-    display: none;
-}
+
 .link-discord {
     position: fixed;
     width: 60px;
@@ -346,7 +344,7 @@ main .inicio .filters button:hover{
     bottom: 85px;
     right: 40px;
     background-color: #ffffff;
-    box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+    box-shadow: 0 0 10px #ffecc2, 0 0 40px #fff7e7, 0 0 80px #ffffff;
     color: black;
     border-radius: 50px;
     text-align: center;
@@ -355,6 +353,7 @@ main .inicio .filters button:hover{
 }
 #discord1 {
     margin-top: 17px;
+    color: black;
 }
 .link-discord:hover {
     transform: translateY(-10px);
