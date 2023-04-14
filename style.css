@@ -1,11 +1,6 @@
 /*
-
 Dark mode color: #1E1E1E / #0f0f0f
-
 Dark mode menu color: #570A57 / #00D7FF / #4E31AA / #03C988 -> Green
-
-
-
 */
 
 /*CONFIGURAÇÕA CSS*/
@@ -26,12 +21,13 @@ Dark mode menu color: #570A57 / #00D7FF / #4E31AA / #03C988 -> Green
     --font-color-dark: white;
     --font-color-light: black;
     --light-mode: white;
+    --header-color: #222222;
 }
 
 .hidden {
     display: none;
 }
- 
+
 /*DEFINIÇÕES BODY E HEADER*/
 body {
     min-height: 100vh;
@@ -46,12 +42,13 @@ header {
     justify-content: space-between;
     width: 99%;
     height: 80px;
-    background-color: #222222;
+    background-color: var(--header-color);
     border-radius: 0px 0px 10px 10px;
     margin-left: 0.5%;
 }
 
 /*IMAGE AND TITLE CONFIGURATION*/
+
 header .img-title {
     display: flex;
     gap: 10px;
@@ -63,7 +60,6 @@ header .img-title img {
 
 header .img-title h1 {
     font-family: 'RocknRoll One';
-
 }
 
 header .img-title h1 span {
@@ -113,11 +109,12 @@ header .container-search-bar .btn-pesquisar {
 }
 
 /*MENU CATEGORIAS*/
+
 header .container-search-bar .menu-categorias {
     padding-left: 50px;
 }
 
-header .container-search-bar .menu-categorias .categorias{
+header .container-search-bar .menu-categorias .categorias {
     border: 2px solid var(--menu-color);
     padding: 5px 26px;
     border-radius: 50px;
@@ -125,14 +122,16 @@ header .container-search-bar .menu-categorias .categorias{
     font-size: 15px;
     color: white;
 }
-header .container-search-bar .menu-categorias .categorias:hover{
+
+header .container-search-bar .menu-categorias .categorias:hover {
     color: var(--menu-color);
     text-shadow: 0 0 7px #00ffaa;
-
+    transition: color .3s;
 }
 
 /*CONFIGURAÇÕA BOTOES LOGIN E SIGNUP*/
-header .menu-options .btn-header{
+
+header .menu-options .btn-header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -180,12 +179,13 @@ header .menu-options .custom-btn-signup {
     outline: none;
 }
 
-header .menu-options .custom-btn-login:hover{
+header .menu-options .custom-btn-login:hover {
     box-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa, 0 0 40px #00ffaa;
     transform: scale(1.1);
     transition: all 0.5s ease;
 }
-header .menu-options .custom-btn-signup:hover{
+
+header .menu-options .custom-btn-signup:hover {
     box-shadow: 0 0 10px #00ffaa, 0 0 20px #00ffaa, 0 0 40px #00ffaa;
     transform: scale(1.1);
     transition: all 0.5s ease;
@@ -194,3 +194,38 @@ header .menu-options .custom-btn-signup:hover{
 /*CONFIG MENU CATEGORIAS DROPDOWN*/
 
 
+.menu-categorias .dropdown a {
+    padding: 5px 26px;
+    font-family: 'Lexend';
+    font-size: 15px;
+    color: white;
+}
+
+.menu-categorias .dropdown a:hover {
+    color: var(--menu-color);
+    text-shadow: 0 0 7px #00ffaa;
+}
+
+.menu-categorias ul li {
+    position: relative;
+}
+
+.menu-categorias .dropdown {
+    display: none;
+    position: absolute;
+    width: 150px;
+    background-color: var(--header-color);
+    border: 2px solid var(--menu-color);
+    border-radius: 15px;
+    top: 28px;
+}
+
+.menu-categorias .dropdown a {
+    display: block;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.menu-categorias ul li:hover .dropdown {
+    display: block;
+}

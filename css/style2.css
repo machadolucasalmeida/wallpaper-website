@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&family=Righteous&family=RocknRoll+One&display=swap');
+
+main h1 {
+    text-align: center;
+    margin-top: 10%;
+    font-family: 'RocknRoll One';
+    font-size: 40px;
+}
+
+main img{
+    margin-left: 34%;
+    margin-top: 4%;
+    border-radius: 15px;
+    box-shadow: 2px 2px black;
+}
