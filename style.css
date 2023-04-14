@@ -121,6 +121,7 @@ header .container-search-bar .menu-categorias .categorias {
     font-family: 'Lexend';
     font-size: 15px;
     color: white;
+    box-shadow: 3px 3px black;
 }
 
 header .container-search-bar .menu-categorias .categorias:hover {
@@ -160,6 +161,7 @@ header .menu-options .custom-btn-login {
     transition: all 0.3s ease;
     position: relative;
     outline: none;
+    box-shadow: 3px 3px black;
 }
 
 header .menu-options .custom-btn-signup {
@@ -177,6 +179,7 @@ header .menu-options .custom-btn-signup {
     transition: all 0.3s ease;
     position: relative;
     outline: none;
+    box-shadow: 3px 3px black;
 }
 
 header .menu-options .custom-btn-login:hover {
@@ -228,4 +231,164 @@ header .menu-options .custom-btn-signup:hover {
 
 .menu-categorias ul li:hover .dropdown {
     display: block;
+    z-index: 999;
+}
+main{
+margin: 0px 2%;
+}
+main .tela-inicial {
+    margin-top: 2%;
+}
+main .tela-inicial .destaques{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%;
+}
+main .tela-inicial .destaques button{
+    width: 140px;
+    height: 36px;
+    color: black;
+    font-family: 'Lexend';
+    font-size: 15px;
+    text-shadow: 0px 0px 0px black;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+    box-shadow: 3px 3px black;
+}
+main .tela-inicial .destaques button:hover{
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+main .tela-inicial .titulo-principal{
+    margin-top: 4%;
+}
+main .tela-inicial .titulo-principal h1{
+    font-family: 'RocknRoll One';
+    font-size: 45px;
+    text-shadow: 5px 3px 10px black;
+}
+
+
+main .inicio{
+    margin-top: 12%;
+}
+main .inicio .filters{
+    display: flex;
+    align-items: center;
+    gap: 3%;
+}
+main .inicio .filters button{
+    width: 130px;
+    height: 32px;
+    color: white;
+    font-family: 'Lexend';
+    font-size: 15px;
+    text-shadow: 0px 0px 0px black;
+    text-align: center;
+    border: 2px solid var(--menu-color);
+    border-radius: 15px;
+    background: var(--header-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+    box-shadow: 3px 3px black;
+}
+main .inicio .filters button:hover{
+    background: white;
+    transition: all .5s;
+    text-shadow: 0px 0px 0px black;
+    color: black;
+    border: none;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*BOTÃO DISCORD*/
+.botao_discord{
+    display: none;
+}
+.link-discord {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 85px;
+    right: 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+    color: black;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 25px;
+    z-index: 1000;
+}
+#discord1 {
+    margin-top: 17px;
+}
+.link-discord:hover {
+    transform: translateY(-10px);
+    transition: all 1s;
+    transform-origin: button;
+    box-shadow: 0 0 10px #ffffff, 0 0 40px #ffffff, 0 0 80px #ffffff;
+    background-color: #ffffff;
+}
+.link-discord::before, .link-discord:after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 63px;
+    height: 63px;
+    top: -3px;
+    left: -3px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    opacity: 0;
+    animation: animacao-botao-discord 1.5s linear infinite;
+}
+.button button:after{
+    animation-delay: .5s;
+}
+@keyframes animacao-botao-discord {
+    0%{
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        transform: scale(1.2);
+        opacity: 0;
+    }
 }
